@@ -7,16 +7,19 @@
     "dev": "vite",
     "build": "vite build",
     "build:staging": "vite build --mode staging",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "jsdom": "^26.1.0",
     "postcss": "^8.5.4",
     "sass": "^1.89.2",
     "sharp": "^0.34.2",
     "svgo": "^3.3.2",
     "vite": "^6.3.5",
-    "vite-plugin-image-optimizer": "^1.1.8"
+    "vite-plugin-image-optimizer": "^1.1.8",
+    "vitest": "^3.2.3"
   },
   "volta": {
     "node": "22.16.0"

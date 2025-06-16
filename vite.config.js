@@ -17,6 +17,17 @@ export default defineConfig({
     },
   },
 
+  // Added for testing
+  test: {
+    // Здесь можно настроить параметры Vitest
+    globals: true, // Включает использование глобальных функций тестирования, таких как describe и it
+    environment: 'jsdom', // Среда тестирования, например, jsdom для тестирования DOM
+    // setupFiles: './vitest.setup.js', // Путь к файлу настройки (если требуется)
+    coverage: {
+      exclude: ['node_modules/'], // Исключаемые файлы и папки
+    },
+  },
+
   // Make MPA Work
   build: {
     // Show source maps in the browser
