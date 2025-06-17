@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import createSvgSpritePlugin from 'vite-plugin-svg-spriter';
 import autoprefixer from 'autoprefixer';
+import eslintPlugin from 'vite-plugin-eslint';
 import { resolve } from 'path';
 
 export default defineConfig({
@@ -42,6 +43,11 @@ export default defineConfig({
     },
   },
   plugins: [
+    eslintPlugin({
+      // Enable ESLint plugin
+      include: ['src/**/*.js', 'src/**/*.js', 'src/**/*.ts'], // Specify the files to lint
+      exclude: ['node_modules/**'], // Exclude node_modules
+    }),
     // Optimize Images
     ViteImageOptimizer({
       jpg: {
